@@ -22,7 +22,7 @@ The DSSP PyMOL Plugin allows users to run `mkdssp` directly within PyMOL and loa
 
 ### **Usage**
 
-1. **Command**:
+1. **Command**: in pymol execution window
    ```pml
    run_dssp_and_load [selection]
    ```
