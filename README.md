@@ -18,7 +18,9 @@ The DSSP PyMOL Plugin allows users to run `mkdssp` directly within PyMOL and loa
        (Schrödinger, LLC 2015)
 
 3. **Plugin Installation**:
-   - Save the plugin script (`dssp_cif_plugin.py`) to the `$PYMOLPATH/modules/pmg_tk/startup/` directory. Alternatively, you can place it in any directory where PyMOL sources plugins.
+   - Save the plugin script (`dssp_cif_plugin.py`) to the `$PYMOLPATH/modules/pmg_tk/startup/` directory.
+   - Alternatively, you can place it in any directory where PyMOL sources plugins.
+   - Or you can use the Plugin Manager of Pymol. 
    - Start PyMOL. If it's already running, source the plugin using:
      ```pml
      run /path/to/dssp_cif_plugin.py
