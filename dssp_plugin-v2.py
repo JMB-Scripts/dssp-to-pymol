@@ -54,18 +54,18 @@ from pymol import cmd
 
 def run_dssp_and_load(selection="all"):
     # Create a temporary PDB file from the current selection in PyMOL
-    tmp_pdb = "/tmp/tmp_protein.pdb"
-    cmd.save(tmp_pdb, selection)
+    tmp_cif = "tmp_protein.cif"
+    cmd.save(tmp_cif, selection)
 
     # Run mkdssp on the temporary PDB file
-    dssp_cif_output = "/tmp/tmp_protein.cif"
-    subprocess.run(["mkdssp", tmp_pdb, dssp_cif_output])
+    dssp_cif_output = "tmp_protein.cif"
+    subprocess.run(["mkdssp", tmp_cif, dssp_cif_output])
 
     # Load the CIF file into PyMOL
     cmd.load(dssp_cif_output, "dssp_output")
 
     # Clean up temporary files
-    os.remove(tmp_pdb)
-    os.remove(dssp_cif_output)
+    os.remove(tmp_cif)
+    #os.remove(dssp_cif_output)
 
 cmd.extend("run_dssp_and_load", run_dssp_and_load)
